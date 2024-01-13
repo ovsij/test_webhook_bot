@@ -36,6 +36,7 @@ BASE_WEBHOOK_URL = "logist.tw1.ru"
 # All handlers should be attached to the Router (or Dispatcher)
 router = Router()
 
+logger = logging.getLogger(__name__)
 
 @router.message(CommandStart())
 async def command_start_handler(message: Message) -> None:
@@ -102,6 +103,9 @@ def main() -> None:
 
     # And finally start webserver
     web.run_app(app, host=WEB_SERVER_HOST, port=WEB_SERVER_PORT)
+
+    logging.basicConfig(level=logging.INFO)
+    logger.info("Starting Bot")
 
 
 if __name__ == "__main__":
