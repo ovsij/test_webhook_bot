@@ -73,6 +73,8 @@ async def on_startup(bot: Bot) -> None:
 
 
 def main() -> None:
+    logging.basicConfig(level=logging.INFO)
+    logger.info("Starting Bot")
     # Dispatcher is a root router
     dp = Dispatcher()
     # ... and all other routers should be attached to Dispatcher
@@ -104,8 +106,7 @@ def main() -> None:
     # And finally start webserver
     web.run_app(app, host=WEB_SERVER_HOST, port=WEB_SERVER_PORT)
 
-    logging.basicConfig(level=logging.INFO)
-    logger.info("Starting Bot")
+    
 
 
 if __name__ == "__main__":
