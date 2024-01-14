@@ -31,7 +31,7 @@ WEBHOOK_PATH = "/webhook"
 WEBHOOK_SECRET = "my-secret"
 # Base URL for webhook will be used to generate webhook URL for Telegram,
 # in this example it is used public DNS with HTTPS support
-BASE_WEBHOOK_URL = "https://ovsijtest.tw1.ru"
+BASE_WEBHOOK_URL = "http://ovsijtest.tw1.ru"
 
 # All handlers should be attached to the Router (or Dispatcher)
 router = Router()
